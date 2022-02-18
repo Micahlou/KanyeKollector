@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Kanye List</h1>
+
+{% for kanye in kanyes %}
+<div class="card">
+    <div class="card-content">
+        <span class="card-title">{{ kanye.name }}</span>
+        <p>Description: {{ kanye.description }}</p>
+        {% if kanye.age > 0 %}
+        <p>Age: {{ kanye.age }}</p>
+        {% else %}
+        <p>Age: Baby Ye</p>
+        {% endif %}
+    </div>
+</div>
+{% endfor %} {% endblock %}
